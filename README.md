@@ -37,8 +37,3 @@ This project demonstrates how to **train and use machine learning models** (Deci
     `size (cm), weight (g), avg_price (₹), shape, color, taste`
 - To switch training algorithm in `train.py`, update the `train_method` in `createPipeline()` to
     `"decision_tree"` or `"random_forest"`
-To switch training algorithm in train.py, update the train_method in createPipeline() to "decision_tree" or "random_forest"
-
-You can force download the dataset again by setting force_download=True in kagglehub.dataset_download()
-    `Predicted fruit: banana`
-  
