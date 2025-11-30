@@ -39,6 +39,7 @@ This project demonstrates how to **train and use machine learning models** (Deci
 | `GET`  | `/health`     | Health check                |
 | `POST` | `/predict/dt` | Predict using Decision Tree |
 | `POST` | `/predict/rf` | Predict using Random Forest |
+
 - Example JSON Request:
 ```json
 {
