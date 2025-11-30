@@ -19,7 +19,7 @@ It also includes a FastAPI service to serve predictions via REST API.
 - Python 3.10 or higher
 - Required Python packages:
   
-    - `pip install pandas numpy scikit-learn joblib kagglehub fastapi uvicorn seaborn pydantic`
+  `pip install pandas numpy scikit-learn joblib kagglehub fastapi uvicorn seaborn pydantic`
 - Kaggle API token (to download dataset via kagglehub) **or refer to this documentation**: [KaggleHub](https://github.com/Kaggle/kagglehub)
   
 ### 2. Train the Models
@@ -76,7 +76,6 @@ It also includes a FastAPI service to serve predictions via REST API.
 
 ### 5. Notes
 - Ensure **input data columns** match the features used in training:
-  
     `size (cm), weight (g), avg_price (₹), shape, color, taste`
 - To switch training algorithm in `train.py`, update the `train_method` in `createPipeline()` to
     `"decision_tree"` or `"random_forest"`
