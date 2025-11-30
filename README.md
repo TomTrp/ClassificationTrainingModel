@@ -78,3 +78,4 @@ It also includes a FastAPI service to serve predictions via REST API.
     `size (cm), weight (g), avg_price (₹), shape, color, taste`
 - To switch training algorithm in `train.py`, update the `train_method` in `createPipeline()` to
     `"decision_tree"` or `"random_forest"`
+- Trained models are stored in the `/models` folder and automatically loaded by FastAPI.
