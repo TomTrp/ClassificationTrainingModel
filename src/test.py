@@ -2,7 +2,7 @@ from joblib import load
 import pandas as pd
 
 # Load model (Random Forest)
-loaded_model = load("fruit_rf_model.joblib")
+loaded_model = load("models/fruit_rf_model.joblib")
 
 # Prepare data for test
 new_data = pd.DataFrame({

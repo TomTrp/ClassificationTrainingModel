@@ -11,13 +11,27 @@ from sklearn.metrics import accuracy_score, classification_report
 import os
 
 # Download csv from kaggle
-# If this csv no longer available use it from datasets/
 def getFruitsDataSet():
-    file_path = "pranavkapratwar/fruit-classification"
-    path = kagglehub.dataset_download(file_path)
-    csv_path = os.path.join(path, "fruit_classification_dataset.csv")
-    print(csv_path)
-    return csv_path
+    backup_csv = os.path.join("datasets", "fruit_classification_dataset.csv")
+
+    try:
+        file_path = "pranavkapratwar/fruit-classification"
+        path = kagglehub.dataset_download(file_path)
+        csv_path = os.path.join(path, "fruit_classification_dataset.csv")
+        
+        if not os.path.exists(csv_path):
+            raise FileNotFoundError(f"Dataset not found in Kaggle download path: {csv_path}")
+        
+        print(f"Loaded dataset from Kaggle: {csv_path}")
+        return csv_path
+
+    except Exception as e:
+        # If this csv no longer available use it from datasets/
+        if os.path.exists(backup_csv):
+            print(f"Failed to load from Kaggle ({e}). Using backup CSV: {backup_csv}")
+            return backup_csv
+        else:
+            raise FileNotFoundError(f"Could not load dataset from Kaggle and backup CSV not found: {backup_csv}") from e
 
 # Pipeline
 def createPipeline(preprocessor, train_method = ""):
@@ -76,5 +90,5 @@ print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_rf))
 
 # Export
-dump(dt_pipeline, "fruit_dt_model.joblib")
-dump(rf_pipeline, "fruit_rf_model.joblib")
+dump(dt_pipeline, "models/fruit_dt_model.joblib")
+dump(rf_pipeline, "models/fruit_rf_model.joblib")
