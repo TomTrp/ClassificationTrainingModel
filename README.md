@@ -41,6 +41,11 @@ It also includes a FastAPI service to serve predictions via REST API.
 | `POST` | `/predict/dt`   | Predict using Decision Tree |
 | `POST` | `/predict/rf`   | Predict using Random Forest |
 
+| Header 1 | Header 2 | Header 3 |
+|---|---|---|
+| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
+| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
+
 - Example JSON Request:
 ```json
 {
