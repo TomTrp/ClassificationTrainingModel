@@ -18,7 +18,6 @@ It also includes a FastAPI service to serve predictions via REST API.
 ### 1. Install Required Tools
 - Python 3.10 or higher
 - Required Python packages:
-  
   `pip install pandas numpy scikit-learn joblib kagglehub fastapi uvicorn seaborn pydantic`
 - Kaggle API token (to download dataset via kagglehub) **or refer to this documentation**: [KaggleHub](https://github.com/Kaggle/kagglehub)
   
