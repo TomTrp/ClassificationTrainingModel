@@ -18,15 +18,15 @@ It also includes a FastAPI service to serve predictions via REST API.
 ### 1. Install Required Tools
 - Python 3.10 or higher
 - Required Python packages:
-    `pip install pandas numpy scikit-learn joblib kagglehub fastapi uvicorn seaborn pydantic`
+    - `pip install pandas numpy scikit-learn joblib kagglehub fastapi uvicorn seaborn pydantic`
 - Kaggle API token (to download dataset via kagglehub) **or refer to this documentation**: [KaggleHub](https://github.com/Kaggle/kagglehub)
   
 ### 2. Train the Models
 - Run `train.py` to download dataset, train models, and save them as .joblib:
-    `python test.py`
+    - `python test.py`
 - Output files:
-    `fruit_dt_model.joblib` → Decision Tree model
-    `fruit_rf_model.joblib` → Random Forest model
+    - `fruit_dt_model.joblib` → Decision Tree model
+    - `fruit_rf_model.joblib` → Random Forest model
 - **Note**: If the dataset cannot be downloaded from Kaggle, you can use the CSV file directly from the `datasets` folder instead.
   
 ### 3. Run FastAPI Server
