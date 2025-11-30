@@ -1,0 +1,14 @@
+name: fruit-classification
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - kagglehub
+  - pandas
+  - datasets
+  - scikit-learn
+  - numpy
+  - matplotlib
+  - seaborn
+  - pydantic
+  - fastapi
