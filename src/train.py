@@ -75,5 +75,6 @@ print(classification_report(y_test, y_pred_dt))
 print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_rf))
 
+# Export
 dump(dt_pipeline, "fruit_dt_model.joblib")
 dump(rf_pipeline, "fruit_rf_model.joblib")
